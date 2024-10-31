@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
     libeigen3-dev \
     libflann-dev \
     libboost-all-dev \
-    libvtk7-dev \
+    libvtk9-dev
     libpcap-dev \
     libpng-dev \
     libusb-1.0-0-dev \
