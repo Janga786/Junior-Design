@@ -1,8 +1,6 @@
 {
    "name": "Ubuntu Development Environment",
-   "build": {
-       "dockerfile": "Dockerfile"
-   },
+   "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",  // Use the official Ubuntu-based devcontainer image
    "settings": {
        "terminal.integrated.defaultProfile.linux": "/bin/bash"
    },
@@ -11,6 +9,5 @@
        "ms-python.python",
        "ms-vscode.cmake-tools"
    ],
-   "postCreateCommand": "sudo apt update && sudo apt install -y cmake build-essential"
+   "postCreateCommand": "sudo apt update && sudo apt install -y cmake build-essential libeigen3-dev libboost-all-dev libflann-dev libusb-1.0-0-dev libopenni-dev libopenni2-dev libqhull-dev libvtk9-dev libpng-dev libpcap-dev"
 }
-
