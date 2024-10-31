@@ -1,16 +1,16 @@
 {
-    "name": "PCL Development Container",
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
-    "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash"
-    },
-    "extensions": [
-        "ms-vscode.cpptools",
-        "ms-vscode.cmake-tools"
-    ],
-    "postCreateCommand": "cmake . && make",
-    "remoteUser": "vscode"
+   "name": "Ubuntu Development Environment",
+   "build": {
+       "dockerfile": "Dockerfile"
+   },
+   "settings": {
+       "terminal.integrated.defaultProfile.linux": "/bin/bash"
+   },
+   "extensions": [
+       "ms-vscode.cpptools",
+       "ms-python.python",
+       "ms-vscode.cmake-tools"
+   ],
+   "postCreateCommand": "sudo apt update && sudo apt install -y cmake build-essential"
 }
 
