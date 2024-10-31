@@ -2,7 +2,8 @@
 FROM mcr.microsoft.com/vscode/devcontainers/base:ubuntu-22.04
 
 # Install dependencies for PCL
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && \
+    apt-get install -y \
     build-essential \
     cmake \
     libeigen3-dev \
