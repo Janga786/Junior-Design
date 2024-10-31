@@ -1,6 +1,6 @@
 {
    "name": "Ubuntu Development Environment",
-   "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",  // Use the official Ubuntu-based devcontainer image
+   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",  // Use a stable Ubuntu-based container
    "settings": {
        "terminal.integrated.defaultProfile.linux": "/bin/bash"
    },
