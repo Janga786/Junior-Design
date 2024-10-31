@@ -1,5 +1,24 @@
-# Base Docker image
-FROM mcr.microsoft.com/vscode/devcontainers/base:ubuntu-22.04
+# Use Ubuntu as base image
+FROM ubuntu:20.04
 
-# Install dependencies for PCL
-RUN apt-get update && apt-get install -y build-essential cmake libeigen3-dev libflann-dev libboost-all-dev libvtk9-dev libpcap-dev libpng-dev libusb-1.0-0-dev libopenni2-dev libpcl-dev
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    cmake \
+    build-essential \
+    git \
+    libflann-dev \
+    libvtk7-dev \
+    libpcl-dev \
+    libeigen3-dev \
+    libboost-all-dev \
+    libpng-dev \
+    libglew-dev \
+    libqhull-dev \
+    libopenni2-dev \
+    libpcap-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Set working directory
+WORKDIR /workspace
+
+# Optional: Additional customizations
