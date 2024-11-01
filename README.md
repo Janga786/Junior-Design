@@ -1,4 +1,3 @@
-/*
 Functions that need to be implemented:
 
 
@@ -28,4 +27,3 @@ OPEN3D
 
 6. Integration with Camera Data:
 RGB-D Integration: Combine depth and color information using create_rgbd_image_from_color_and_depth(), enabling enhanced object characterization.
-*/
