@@ -1,0 +1,20 @@
+{
+   "name": "CLiDA Development Environment",
+   "image": "mcr.microsoft.com/devcontainers/python:3.8",  // Specify a base Python image
+   "features": {
+      "ghcr.io/devcontainers/features/docker-in-docker:1": {}  // Enables Docker support if needed
+   },
+   "postCreateCommand": "pip install -r requirements.txt",  // Installs packages after setup
+   "settings": {
+      "terminal.integrated.defaultProfile.linux": "bash"
+   },
+   "extensions": [
+      "ms-python.python",           // Python support
+      "ms-vscode.cpptools",          // C++ support if needed
+      "ms-toolsai.jupyter",          // Jupyter support for notebooks
+      "ms-vscode.vscode-typescript-tslint-plugin"
+   ],
+   "forwardPorts": [8888],  // Port forwarding for Jupyter or web servers
+   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+   "workspaceFolder": "/workspace"
+}
